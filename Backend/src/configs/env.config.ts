@@ -1,10 +1,15 @@
 import "dotenv/config";
 import z from "zod";
 
+const required = () => {
+  return z.string().min(1);
+};
+
 const envSchema = z.object({
-  PORT: z.string().min(1),
-  NODE_ENV: z.string().min(1),
-  MONGO_URI: z.string().min(1),
+  PORT: required(),
+  NODE_ENV: required(),
+  MONGO_URI: required(),
+  TOKEN_SECRET: required(),
 });
 
 const env = envSchema.safeParse(process.env);

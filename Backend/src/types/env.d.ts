@@ -1,7 +1,8 @@
-  declare namespace NodeJS {
-    interface ProcessEnv {
-      PORT: string;
-      NODE_ENV: "production" | "development" | "test";
-      MONGO_URI: string;
-    }
+declare namespace NodeJS {
+  interface ProcessEnv {
+    readonly PORT: string;
+    readonly NODE_ENV: "production" | "development" | "test";
+    readonly MONGO_URI: string;
+    readonly TOKEN_SECRET: string;
   }
+}

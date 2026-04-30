@@ -1,7 +1,10 @@
 {
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.6.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
   "name": "backend",
@@ -9,7 +12,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tsx --watch server.ts",
+    "dev": "nodemon server.ts",
     "start": "npx tsx server.ts"
   },
   "keywords": [],
@@ -19,6 +22,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.0",
     "zod": "^4.3.6"
   }

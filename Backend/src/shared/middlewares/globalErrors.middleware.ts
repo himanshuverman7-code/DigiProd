@@ -15,6 +15,7 @@ const globalErrors = (
     success: false,
     message,
     errors,
+    data: null
   });
 };
 
