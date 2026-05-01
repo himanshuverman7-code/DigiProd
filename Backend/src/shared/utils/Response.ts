@@ -1,6 +1,11 @@
 import type { Response } from "express";
 import { config } from "../../configs/env.config.js";
 
+export const sendResponse = (res: Response, code:number, rawData: object) =>{
+  const data = {...rawData, errors: null}
+  res.status(code).json(data)
+}
+
 export const setCookies = (
   res: Response,
   cookie: { key: string; value: string },

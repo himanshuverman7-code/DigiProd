@@ -5,6 +5,20 @@ import { createproductSchema } from "./product.schemas.js";
 
 const productRoutes = Router();
 
-productRoutes.post("/create", validator(createproductSchema), productControllers.createProduct);
+productRoutes.post(
+  "/create",
+  validator(createproductSchema),
+  productControllers.createProduct,
+);
+
+productRoutes.get(
+    '/', 
+    productControllers.getAllProducts
+);
+
+productRoutes.get(
+    '/:id', 
+    productControllers.getProduct
+);
 
 export default productRoutes;
